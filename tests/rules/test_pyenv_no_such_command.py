@@ -1,7 +1,7 @@
 import pytest
 
-from thefuck.rules.pyenv_no_such_command import get_new_command, match
-from thefuck.types import Command
+from therandy.rules.pyenv_no_such_command import get_new_command, match
+from therandy.types import Command
 
 
 @pytest.fixture
@@ -11,7 +11,7 @@ def output(pyenv_cmd):
 
 @pytest.fixture(autouse=True)
 def Popen(mocker):
-    mock = mocker.patch('thefuck.rules.pyenv_no_such_command.Popen')
+    mock = mocker.patch('therandy.rules.pyenv_no_such_command.Popen')
     mock.return_value.stdout.readlines.return_value = (
         b'--version\nactivate\ncommands\ncompletions\ndeactivate\nexec_\n'
         b'global\nhelp\nhooks\ninit\ninstall\nlocal\nprefix_\n'

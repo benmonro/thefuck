@@ -1,3 +1,3 @@
-from thefuck.utils import which
+from therandy.utils import which
 
 apt_available = bool(which('apt-get'))

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pytest
-from thefuck.rules.ln_no_hard_link import match, get_new_command
-from thefuck.types import Command
+from therandy.rules.ln_no_hard_link import match, get_new_command
+from therandy.types import Command
 
 error = "hard link not allowed for directory"
 

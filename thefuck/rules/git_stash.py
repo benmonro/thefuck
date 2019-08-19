@@ -1,5 +1,5 @@
-from thefuck.shells import shell
-from thefuck.specific.git import git_support
+from therandy.shells import shell
+from therandy.specific.git import git_support
 
 
 @git_support

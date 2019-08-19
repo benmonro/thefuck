@@ -1,6 +1,6 @@
-from thefuck.specific.npm import npm_available
-from thefuck.utils import replace_argument, for_app, eager, get_closest
-from thefuck.specific.sudo import sudo_support
+from therandy.specific.npm import npm_available
+from therandy.utils import replace_argument, for_app, eager, get_closest
+from therandy.specific.sudo import sudo_support
 
 enabled_by_default = npm_available
 

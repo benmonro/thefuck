@@ -25,7 +25,7 @@ class Zsh(Generic):
                 export TF_HISTORY;
                 export PYTHONIOENCODING=utf-8;
                 TF_CMD=$(
-                    thefuck {argument_placeholder} $@
+                    therandy {argument_placeholder} $@
                 ) && eval $TF_CMD;
                 unset TF_HISTORY;
                 export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
@@ -49,11 +49,11 @@ class Zsh(Generic):
                        app_alias=self.app_alias(alias_name))
         else:
             log_path = os.path.join(
-                gettempdir(), 'thefuck-script-log-{}'.format(uuid4().hex))
+                gettempdir(), 'therandy-script-log-{}'.format(uuid4().hex))
             return '''
                 export THEFUCK_INSTANT_MODE=True;
                 export THEFUCK_OUTPUT_LOG={log};
-                thefuck --shell-logger {log};
+                therandy --shell-logger {log};
                 rm -f {log};
                 exit
             '''.format(log=log_path)
@@ -85,7 +85,7 @@ class Zsh(Generic):
 
     def how_to_configure(self):
         return self._create_shell_configuration(
-            content=u'eval $(thefuck --alias)',
+            content=u'eval $(therandy --alias)',
             path='~/.zshrc',
             reload='source ~/.zshrc')
 

@@ -3,11 +3,11 @@
 import pytest
 import warnings
 from mock import Mock, call, patch
-from thefuck.utils import default_settings, \
+from therandy.utils import default_settings, \
     memoize, get_closest, get_all_executables, replace_argument, \
     get_all_matched_commands, is_app, for_app, cache, \
     get_valid_history_without_current, _cache, get_close_matches
-from thefuck.types import Command
+from therandy.types import Command
 
 
 @pytest.mark.parametrize('override, old, new', [
@@ -51,12 +51,12 @@ class TestGetClosest(object):
 
 
 class TestGetCloseMatches(object):
-    @patch('thefuck.utils.difflib_get_close_matches')
+    @patch('therandy.utils.difflib_get_close_matches')
     def test_call_with_n(self, difflib_mock):
         get_close_matches('', [], 1)
         assert difflib_mock.call_args[0][2] == 1
 
-    @patch('thefuck.utils.difflib_get_close_matches')
+    @patch('therandy.utils.difflib_get_close_matches')
     def test_call_without_n(self, difflib_mock, settings):
         get_close_matches('', [])
         assert difflib_mock.call_args[0][2] == settings.get('num_close_matches')
@@ -64,8 +64,8 @@ class TestGetCloseMatches(object):
 
 @pytest.fixture
 def get_aliases(mocker):
-    mocker.patch('thefuck.shells.shell.get_aliases',
-                 return_value=['vim', 'apt-get', 'fsck', 'fuck'])
+    mocker.patch('therandy.shells.shell.get_aliases',
+                 return_value=['vim', 'apt-get', 'fsck', 'randy'])
 
 
 @pytest.mark.usefixtures('no_memoize', 'get_aliases')
@@ -73,7 +73,7 @@ def test_get_all_executables():
     all_callables = get_all_executables()
     assert 'vim' in all_callables
     assert 'fsck' in all_callables
-    assert 'fuck' not in all_callables
+    assert 'randy' not in all_callables
 
 
 @pytest.fixture
@@ -89,7 +89,7 @@ def os_environ_pathsep(monkeypatch, path, pathsep):
     ('/foo:/bar:/baz:/foo/bar', ':'),
     (r'C:\\foo;C:\\bar;C:\\baz;C:\\foo\\bar', ';')])
 def test_get_all_executables_pathsep(path, pathsep):
-    with patch('thefuck.utils.Path') as Path_mock:
+    with patch('therandy.utils.Path') as Path_mock:
         get_all_executables()
         Path_mock.assert_has_calls([call(p) for p in path.split(pathsep)], True)
 
@@ -173,17 +173,17 @@ class TestCache(object):
             def close(self):
                 return
 
-        mocker.patch('thefuck.utils.shelve.open', new_callable=lambda: _Shelve)
+        mocker.patch('therandy.utils.shelve.open', new_callable=lambda: _Shelve)
         return value
 
     @pytest.fixture(autouse=True)
     def enable_cache(self, monkeypatch, shelve):
-        monkeypatch.setattr('thefuck.utils.cache.disabled', False)
+        monkeypatch.setattr('therandy.utils.cache.disabled', False)
         _cache._init_db()
 
     @pytest.fixture(autouse=True)
     def mtime(self, mocker):
-        mocker.patch('thefuck.utils.os.path.getmtime', return_value=0)
+        mocker.patch('therandy.utils.os.path.getmtime', return_value=0)
 
     @pytest.fixture
     def fn(self):
@@ -195,7 +195,7 @@ class TestCache(object):
 
     @pytest.fixture
     def key(self, monkeypatch):
-        monkeypatch.setattr('thefuck.utils.Cache._get_key',
+        monkeypatch.setattr('therandy.utils.Cache._get_key',
                             lambda *_: 'key')
         return 'key'
 
@@ -225,14 +225,14 @@ class TestGetValidHistoryWithoutCurrent(object):
 
     @pytest.fixture(autouse=True)
     def history(self, mocker):
-        return mocker.patch('thefuck.shells.shell.get_history',
-                            return_value=['le cat', 'fuck', 'ls cat',
+        return mocker.patch('therandy.shells.shell.get_history',
+                            return_value=['le cat', 'randy', 'ls cat',
                                           'diff x', 'nocommand x', u'café ô'])
 
     @pytest.fixture(autouse=True)
     def alias(self, mocker):
-        return mocker.patch('thefuck.utils.get_alias',
-                            return_value='fuck')
+        return mocker.patch('therandy.utils.get_alias',
+                            return_value='randy')
 
     @pytest.fixture(autouse=True)
     def bins(self, mocker):
@@ -242,12 +242,12 @@ class TestGetValidHistoryWithoutCurrent(object):
             bin_mock.configure_mock(name=name, is_dir=lambda: False)
             callables.append(bin_mock)
         path_mock = mocker.Mock(iterdir=mocker.Mock(return_value=callables))
-        return mocker.patch('thefuck.utils.Path', return_value=path_mock)
+        return mocker.patch('therandy.utils.Path', return_value=path_mock)
 
     @pytest.mark.parametrize('script, result', [
         ('le cat', ['ls cat', 'diff x', u'café ô']),
         ('diff x', ['ls cat', u'café ô']),
-        ('fuck', ['ls cat', 'diff x', u'café ô']),
+        ('randy', ['ls cat', 'diff x', u'café ô']),
         (u'cafe ô', ['ls cat', 'diff x', u'café ô']),
     ])
     def test_get_valid_history_without_current(self, script, result):

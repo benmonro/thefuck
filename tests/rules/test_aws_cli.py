@@ -1,7 +1,7 @@
 import pytest
 
-from thefuck.rules.aws_cli import match, get_new_command
-from thefuck.types import Command
+from therandy.rules.aws_cli import match, get_new_command
+from therandy.types import Command
 
 
 no_suggestions = '''\

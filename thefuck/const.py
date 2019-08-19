@@ -60,14 +60,14 @@ ENV_TO_ATTR = {'THEFUCK_RULES': 'rules',
                'THEFUCK_INSTANT_MODE': 'instant_mode',
                'THEFUCK_NUM_CLOSE_MATCHES': 'num_close_matches'}
 
-SETTINGS_HEADER = u"""# The Fuck settings file
+SETTINGS_HEADER = u"""# The Randy settings file
 #
 # The rules are defined as in the example bellow:
 #
 # rules = ['cd_parent', 'git_push', 'python_command', 'sudo']
 #
 # The default values are as follows. Uncomment and change to fit your needs.
-# See https://github.com/nvbn/thefuck#settings for more information.
+# See https://github.com/nvbn/therandy#settings for more information.
 #
 
 """

@@ -1,8 +1,8 @@
 import re
 import os
-from thefuck.utils import memoize, default_settings
-from thefuck.conf import settings
-from thefuck.shells import shell
+from therandy.utils import memoize, default_settings
+from therandy.conf import settings
+from therandy.shells import shell
 
 
 # order is important: only the first match is considered
@@ -11,7 +11,7 @@ patterns = (
     '^    at {file}:{line}:{col}',
     # cargo:
     '^   {file}:{line}:{col}',
-    # python, thefuck:
+    # python, therandy:
     '^  File "{file}", line {line}',
     # awk:
     '^awk: {file}:{line}:',

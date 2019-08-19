@@ -1,5 +1,5 @@
-from thefuck.specific.npm import npm_available, get_scripts
-from thefuck.utils import for_app
+from therandy.specific.npm import npm_available, get_scripts
+from therandy.utils import for_app
 
 enabled_by_default = npm_available
 

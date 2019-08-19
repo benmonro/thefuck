@@ -1,5 +1,5 @@
-from thefuck.shells import shell
-from thefuck.utils import for_app
+from therandy.shells import shell
+from therandy.utils import for_app
 
 
 @for_app('vagrant')

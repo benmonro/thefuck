@@ -2,9 +2,9 @@
 
 import os
 import six
-from thefuck.specific.sudo import sudo_support
-from thefuck.rules import cd_mkdir
-from thefuck.utils import for_app, get_close_matches
+from therandy.specific.sudo import sudo_support
+from therandy.rules import cd_mkdir
+from therandy.utils import for_app, get_close_matches
 
 __author__ = "mmussomele"
 

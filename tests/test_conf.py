@@ -2,12 +2,12 @@ import pytest
 import six
 import os
 from mock import Mock
-from thefuck import const
+from therandy import const
 
 
 @pytest.fixture
 def load_source(mocker):
-    return mocker.patch('thefuck.conf.load_source')
+    return mocker.patch('therandy.conf.load_source')
 
 
 def test_settings_defaults(load_source, settings):
@@ -105,13 +105,13 @@ class TestInitializeSettingsFile(object):
 
 
 @pytest.mark.parametrize('legacy_dir_exists, xdg_config_home, result', [
-    (False, '~/.config', '~/.config/thefuck'),
-    (False, '/user/test/config/', '/user/test/config/thefuck'),
-    (True, '~/.config', '~/.thefuck'),
-    (True, '/user/test/config/', '~/.thefuck')])
+    (False, '~/.config', '~/.config/therandy'),
+    (False, '/user/test/config/', '/user/test/config/therandy'),
+    (True, '~/.config', '~/.therandy'),
+    (True, '/user/test/config/', '~/.therandy')])
 def test_get_user_dir_path(mocker, os_environ, settings, legacy_dir_exists,
                            xdg_config_home, result):
-    mocker.patch('thefuck.conf.Path.is_dir',
+    mocker.patch('therandy.conf.Path.is_dir',
                  return_value=legacy_dir_exists)
 
     if xdg_config_home is not None:

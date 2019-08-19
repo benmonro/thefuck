@@ -1,6 +1,6 @@
 import re
-from thefuck.utils import for_app, replace_command
-from thefuck.specific.npm import get_scripts, npm_available
+from therandy.utils import for_app, replace_command
+from therandy.specific.npm import get_scripts, npm_available
 
 enabled_by_default = npm_available
 

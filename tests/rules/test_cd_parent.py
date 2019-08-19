@@ -1,5 +1,5 @@
-from thefuck.rules.cd_parent import match, get_new_command
-from thefuck.types import Command
+from therandy.rules.cd_parent import match, get_new_command
+from therandy.types import Command
 
 
 def test_match():

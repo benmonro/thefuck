@@ -1,7 +1,7 @@
 import re
 from subprocess import Popen, PIPE
-from thefuck.utils import memoize, which
-from thefuck.shells import shell
+from therandy.utils import memoize, which
+from therandy.shells import shell
 
 enabled_by_default = bool(which('lsof'))
 
