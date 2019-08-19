@@ -18,7 +18,7 @@ export SHELL=/bin/bash
 export PS1="$ "
 echo > $HISTFILE
 eval $(therandy --alias {})
-echo "instant mode ready: $THEFUCK_INSTANT_MODE"
+echo "instant mode ready: $THERANDY_INSTANT_MODE"
 ' > ~/.bashrc'''
 
 

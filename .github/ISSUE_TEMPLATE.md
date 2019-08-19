@@ -19,7 +19,7 @@ How to reproduce the bug:
 
     FILL THIS IN
 
-The output of The Randy with `THEFUCK_DEBUG=true` exported (typically execute `export THEFUCK_DEBUG=true` in your shell before The Randy):
+The output of The Randy with `THERANDY_DEBUG=true` exported (typically execute `export THERANDY_DEBUG=true` in your shell before The Randy):
 
     FILL THIS IN
 

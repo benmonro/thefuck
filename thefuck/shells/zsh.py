@@ -38,7 +38,7 @@ class Zsh(Generic):
                            if settings.alter_history else ''))
 
     def instant_mode_alias(self, alias_name):
-        if os.environ.get('THEFUCK_INSTANT_MODE', '').lower() == 'true':
+        if os.environ.get('THERANDY_INSTANT_MODE', '').lower() == 'true':
             mark = ('%{' +
                     USER_COMMAND_MARK + '\b' * len(USER_COMMAND_MARK)
                     + '%}')
@@ -51,8 +51,8 @@ class Zsh(Generic):
             log_path = os.path.join(
                 gettempdir(), 'therandy-script-log-{}'.format(uuid4().hex))
             return '''
-                export THEFUCK_INSTANT_MODE=True;
-                export THEFUCK_OUTPUT_LOG={log};
+                export THERANDY_INSTANT_MODE=True;
+                export THERANDY_OUTPUT_LOG={log};
                 therandy --shell-logger {log};
                 rm -f {log};
                 exit

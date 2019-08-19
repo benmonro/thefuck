@@ -49,7 +49,7 @@ class TestBash(object):
 
     def test_app_alias(self, shell):
         assert 'randy () {' in shell.app_alias('randy')
-        assert 'FUCK () {' in shell.app_alias('FUCK')
+        assert 'RANDY () {' in shell.app_alias('RANDY')
         assert 'therandy' in shell.app_alias('randy')
         assert 'PYTHONIOENCODING' in shell.app_alias('randy')
 

@@ -45,20 +45,20 @@ DEFAULT_SETTINGS = {'rules': DEFAULT_RULES,
                     'num_close_matches': 3,
                     'env': {'LC_ALL': 'C', 'LANG': 'C', 'GIT_TRACE': '1'}}
 
-ENV_TO_ATTR = {'THEFUCK_RULES': 'rules',
-               'THEFUCK_EXCLUDE_RULES': 'exclude_rules',
-               'THEFUCK_WAIT_COMMAND': 'wait_command',
-               'THEFUCK_REQUIRE_CONFIRMATION': 'require_confirmation',
-               'THEFUCK_NO_COLORS': 'no_colors',
-               'THEFUCK_DEBUG': 'debug',
-               'THEFUCK_PRIORITY': 'priority',
-               'THEFUCK_HISTORY_LIMIT': 'history_limit',
-               'THEFUCK_ALTER_HISTORY': 'alter_history',
-               'THEFUCK_WAIT_SLOW_COMMAND': 'wait_slow_command',
-               'THEFUCK_SLOW_COMMANDS': 'slow_commands',
-               'THEFUCK_REPEAT': 'repeat',
-               'THEFUCK_INSTANT_MODE': 'instant_mode',
-               'THEFUCK_NUM_CLOSE_MATCHES': 'num_close_matches'}
+ENV_TO_ATTR = {'THERANDY_RULES': 'rules',
+               'THERANDY_EXCLUDE_RULES': 'exclude_rules',
+               'THERANDY_WAIT_COMMAND': 'wait_command',
+               'THERANDY_REQUIRE_CONFIRMATION': 'require_confirmation',
+               'THERANDY_NO_COLORS': 'no_colors',
+               'THERANDY_DEBUG': 'debug',
+               'THERANDY_PRIORITY': 'priority',
+               'THERANDY_HISTORY_LIMIT': 'history_limit',
+               'THERANDY_ALTER_HISTORY': 'alter_history',
+               'THERANDY_WAIT_SLOW_COMMAND': 'wait_slow_command',
+               'THERANDY_SLOW_COMMANDS': 'slow_commands',
+               'THERANDY_REPEAT': 'repeat',
+               'THERANDY_INSTANT_MODE': 'instant_mode',
+               'THERANDY_NUM_CLOSE_MATCHES': 'num_close_matches'}
 
 SETTINGS_HEADER = u"""# The Randy settings file
 #
@@ -72,7 +72,7 @@ SETTINGS_HEADER = u"""# The Randy settings file
 
 """
 
-ARGUMENT_PLACEHOLDER = 'THEFUCK_ARGUMENT_PLACEHOLDER'
+ARGUMENT_PLACEHOLDER = 'THERANDY_ARGUMENT_PLACEHOLDER'
 
 CONFIGURATION_TIMEOUT = 60
 
