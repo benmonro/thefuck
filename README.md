@@ -18,7 +18,7 @@ E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
 
 ➜ randy
 sudo apt-get install vim [enter/↑/↓/ctrl+c]
-[sudo] password for nvbn:
+[sudo] password for benmonro:
 Reading package lists... Done
 ...
 ```
@@ -86,7 +86,7 @@ E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
 
 ➜ randy
 sudo apt-get install vim
-[sudo] password for nvbn:
+[sudo] password for benmonro:
 Reading package lists... Done
 ...
 ```

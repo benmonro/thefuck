@@ -67,7 +67,7 @@ SETTINGS_HEADER = u"""# The Randy settings file
 # rules = ['cd_parent', 'git_push', 'python_command', 'sudo']
 #
 # The default values are as follows. Uncomment and change to fit your needs.
-# See https://github.com/nvbn/therandy#settings for more information.
+# See https://github.com/benmonro/therandy#settings for more information.
 #
 
 """

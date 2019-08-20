@@ -111,7 +111,7 @@ def how_to_configure_alias(configuration_details):
                     bold=color(colorama.Style.BRIGHT),
                     reset=color(colorama.Style.RESET_ALL)))
 
-    print(u'More details - https://github.com/nvbn/therandy#manual-installation')
+    print(u'More details - https://github.com/benmonro/therandy#manual-installation')
 
 
 def already_configured(configuration_details):
