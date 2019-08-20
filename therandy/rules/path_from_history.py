@@ -2,7 +2,7 @@ from collections import Counter
 import re
 from therandy.system import Path
 from therandy.utils import (get_valid_history_without_current,
-                           memoize, replace_argument)
+                            memoize, replace_argument)
 from therandy.shells import shell
 
 

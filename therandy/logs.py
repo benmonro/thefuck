@@ -137,5 +137,5 @@ def configured_successfully(configuration_details):
 def version(therandy_version, python_version, shell_info):
     sys.stderr.write(
         u'The Randy {} using Python {} and {}\n'.format(therandy_version,
-                                                       python_version,
-                                                       shell_info))
+                                                        python_version,
+                                                        shell_info))

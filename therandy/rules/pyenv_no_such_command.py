@@ -2,7 +2,7 @@ import re
 from subprocess import PIPE, Popen
 
 from therandy.utils import (cache, for_app, replace_argument, replace_command,
-                           which)
+                            which)
 
 COMMON_TYPOS = {
     'list': ['versions', 'install --list'],
