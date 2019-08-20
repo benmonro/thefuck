@@ -128,7 +128,7 @@ On other systems, install *The Randy*  by using `pip`:
 pip install therandy
 ```
 
-[Alternatively, you may use an OS package manager (OS X, Ubuntu, Arch).](https://github.com/nvbn/therandy/wiki/Installation)
+[Alternatively, you may use an OS package manager (OS X, Ubuntu, Arch).](https://github.com/benmonro/therandy/wiki/Installation)
 
 <a href='#manual-installation' name='manual-installation'>#</a>
 It is recommended that you place this command in your `.bash_profile`,
@@ -140,7 +140,7 @@ eval $(therandy --alias)
 eval $(therandy --alias RANDY)
 ```
 
-[Or in your shell config (Bash, Zsh, Fish, Powershell, tcsh).](https://github.com/nvbn/therandy/wiki/Shell-aliases)
+[Or in your shell config (Bash, Zsh, Fish, Powershell, tcsh).](https://github.com/benmonro/therandy/wiki/Shell-aliases)
 
 Changes are only available in a new shell session. To make changes immediately
 available, run `source ~/.bashrc` (or your shell config file like `.zshrc`).
@@ -377,9 +377,9 @@ priority = 1000  # Lower first, default is 1000
 requires_output = True
 ```
 
-[More examples of rules](https://github.com/nvbn/therandy/tree/master/therandy/rules),
-[utility functions for rules](https://github.com/nvbn/therandy/tree/master/therandy/utils.py),
-[app/os-specific helpers](https://github.com/nvbn/therandy/tree/master/therandy/specific/).
+[More examples of rules](https://github.com/benmonro/therandy/tree/master/therandy/rules),
+[utility functions for rules](https://github.com/benmonro/therandy/tree/master/therandy/utils.py),
+[app/os-specific helpers](https://github.com/benmonro/therandy/tree/master/therandy/specific/).
 
 ## Settings
 
@@ -492,14 +492,14 @@ Project License can be found [here](LICENSE.md).
 
 [version-badge]:   https://img.shields.io/pypi/v/therandy.svg?label=version
 [version-link]:    https://pypi.python.org/pypi/therandy/
-[travis-badge]:    https://travis-ci.org/nvbn/therandy.svg?branch=master
-[travis-link]:     https://travis-ci.org/nvbn/therandy
+[travis-badge]:    https://travis-ci.org/benmonro/therandy.svg?branch=master
+[travis-link]:     https://travis-ci.org/benmonro/therandy
 [appveyor-badge]:  https://ci.appveyor.com/api/projects/status/1sskj4imj02um0gu/branch/master?svg=true
-[appveyor-link]:   https://ci.appveyor.com/project/nvbn/therandy
-[coverage-badge]:  https://img.shields.io/coveralls/nvbn/therandy.svg
-[coverage-link]:   https://coveralls.io/github/nvbn/therandy
+[appveyor-link]:   https://ci.appveyor.com/project/benmonro/therandy
+[coverage-badge]:  https://img.shields.io/coveralls/benmonro/therandy.svg
+[coverage-link]:   https://coveralls.io/github/benmonro/therandy
 [license-badge]:   https://img.shields.io/badge/license-MIT-007EC7.svg
-[examples-link]:   https://raw.githubusercontent.com/nvbn/therandy/master/example.gif
-[instant-mode-gif-link]:   https://raw.githubusercontent.com/nvbn/therandy/master/example_instant_mode.gif
+[examples-link]:   https://raw.githubusercontent.com/benmonro/therandy/master/example.gif
+[instant-mode-gif-link]:   https://raw.githubusercontent.com/benmonro/therandy/master/example_instant_mode.gif
 [homebrew]:        https://brew.sh/
 [linuxbrew]:       https://linuxbrew.sh/
